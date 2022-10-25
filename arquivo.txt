@@ -1,0 +1,74 @@
+programa
+{
+	
+	inteiro quantidade = 0
+	real valor = 0.0, dinheiro = 0.0
+	caracter escolhe
+		
+	funcao inicio()
+	{
+		inteiro opcao = 0
+		escreva("=============================\n")
+		escreva("  Bem vindo à lanchonete \n")
+		escreva("        do BRUNO!\n")
+		escreva("=============================\n")
+		limpa()
+		menu(opcao)
+		}
+		
+		funcao menu(inteiro opcao){
+			escreva("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
+		escreva("          MENU DO LANCHE DO BRUNO:                  \n")
+		escreva("LANCHE            CÓDIGO          VALOR  \n")
+		escreva("X-Salada            1             10,00  \n")
+		escreva("X-Bacon             2             15,30  \n")
+		escreva("X-Egg               3             14,50  \n")
+		escreva("Refrigerante        4             8,60  \n")
+			escreva("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
+		escreva("Escolha o código sua opcão: ")
+		leia(opcao)
+		se (opcao < 1 ou opcao >4){
+			escreva("OPÇÃO INVÁLIDA!")
+			
+		}senao{	
+		escolha(opcao){
+
+			caso 1: 
+				limpa()
+				dinheiro =  10.00
+				
+			pare
+			
+			caso 2:
+				limpa()
+				dinheiro = 15.30
+			pare
+			
+			caso 3:
+				limpa()
+				dinheiro = 14.50
+				
+			pare
+			
+			caso 4:
+				limpa()
+				dinheiro = 8.60
+				
+			pare
+			
+			}
+		escreva("Quantos irá querer? ")
+		leia(quantidade)
+		valor = valor + dinheiro * quantidade
+		escreva("Deseja mais alguma coisa? S/N ")
+		leia(escolhe)
+		se(escolhe == 's'){
+			limpa()
+			menu(opcao)
+		}
+			limpa()
+		 	escreva("O preço será de R$:", valor," \nTenha uma boa tarde e volte sempre!!!")
+				}
+		
+		}
+}
